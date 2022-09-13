@@ -1,0 +1,10 @@
+[package]
+name = "component"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+yew = { git = "https://github.com/yewstack/yew.git", features = ["csr"] }
+
+[build-dependencies]
+tailwind-importer = { git = "https://github.com/BrettMayson/tailwind-importer" }

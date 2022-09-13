@@ -1,0 +1,11 @@
+[package]
+name = "frontend"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+component = { path = "../component" }
+yew = { git = "https://github.com/yewstack/yew/", features = ["csr"] }
+
+[build-dependencies]
+tailwind-importer = { path = "../../" }
