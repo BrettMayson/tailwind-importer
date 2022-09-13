@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 license = "MIT"
 description = "Use tailwind across your rust project"
+repository = "https://github.com/BrettMayson/tailwind-importer"
 
 [dependencies]
 paste = "1.0.9"
