@@ -15,7 +15,7 @@ pub fn build_library() {
     }
 }
 
-/// Call this function in the `build.rs` of the main Yew application
+/// Call this function in the `build.rs` of the main application
 pub fn build_frontend() {
     let target = std::env::var_os("OUT_DIR").unwrap();
     let target_dir = Path::new(&target).parent().unwrap().parent().unwrap();

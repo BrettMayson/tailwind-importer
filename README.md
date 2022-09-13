@@ -1,5 +1,10 @@
 # Yew Tailwind
 
+```toml
+[build-dependencies]
+tailwind-importer = "0.1.2"
+```
+
 ## For Applications
 
 Create a tailwind.css for your application, including all compatible crates.
