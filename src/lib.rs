@@ -17,12 +17,13 @@ pub fn build_library() {
 
 /// Call this function in the `build.rs` of the main Yew application
 pub fn build_frontend() {
-    let target = std::env::var_os("CARGO_TARGET_DIR").unwrap();
+    let target = std::env::var_os("OUT_DIR").unwrap();
+    let target_dir = Path::new(&target).parent().unwrap().parent().unwrap();
     std::process::Command::new("tailwindcss")
         .arg("--content")
         .arg(format!(
-            "{}/**/all.rs,./src/**/*.{{html,rs}},./index.html",
-            target.to_str().unwrap(),
+            "{}/**/*.rs,./src/**/*.{{html,rs}},./index.html",
+            target_dir.display(),
         ))
         .arg("-o")
         .arg("./tailwind.css")
